@@ -1,4 +1,4 @@
-    var palabras = ['PSICOLOGIA', 'COMPLUTENSE', 'UCM', 'SOMOSAGUA', 'LOGOPEDIA', 'GRADO', 'MASTER', 'DOCTORADO', 'MADRID', 'FACULTAD', 'BIBLIOTECA', 'ESTUDIANTE', 'EXITO', 'INVESTIGACION', 'CAFETERIA', 'AMISTAD', 'AMOR', 'BIENVENIDO']; // Biblioteca de palabras para la adivinanza
+    var palabras = ['PSICOLOGIA', 'COMPLUTENSE', 'UCM', 'SOMOSAGUA', 'LOGOPEDIA', 'GRADO', 'MASTER', 'DOCTORADO', 'MADRID', 'FACULTAD', 'BIBLIOTECA', 'ESTUDIANTE', 'EXITO', 'INVESTIGACION', 'CAFETERIA', 'AMISTAD', 'AMOR', 'BIENVENIDO', 'UNIVERSIDAD']; // Biblioteca de palabras para la adivinanza
     var palabraAAdivinada = '';
     var palabraAdivinada = '';
     var intentos = 6;  // 6 intentos restantes
