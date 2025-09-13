@@ -101,27 +101,22 @@
     }
 
 
-function crearBotonesLetras() { // Función para crear botones de letras
-  var letrascontenedor = document.getElementById('letras');
-  letrascontenedor.innerHTML = '';
-  for (var i = 0; i < 27; i++) {
-    let letra;
-    if (i === 14) { // Insertar la letra Ñ después de la N (índice 14 para mantener el orden)
-      letra = 'Ñ';
-    } else if (i < 14) {
-      letra = String.fromCharCode(65 + i); // Letras A-N
-    } else {
-      letra = String.fromCharCode(64 + i); // Letras O-Z ajustadas por la posición de Ñ
+    function crearBotonesLetras() {
+      var letrascontenedor = document.getElementById('letras');
+      letrascontenedor.innerHTML = ''; // 使用 .innerHTML 设置新的内容时，它会替换元素原有的内容
+      var letras = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'; // 字符串 letras 其中包含所有的大写字母，包括 Ñ
+      for (var i = 0; i < letras.length; i++) { // 使用 for 循环来遍历 letras 字符串中的每个字符
+        let letra = letras[i]; // 将当前字符赋值给变量 letra
+        const button = document.createElement('button'); // 创建新的 <button> 元素
+        button.textContent = letra; //  将按钮的文本内容设置为当前字符，即当前字母
+        button.onclick = function() { // 添加一个点击事件处理函数。当按钮被点击时，执行其中的代码块:
+          this.disabled = true; // 将当前被点击的按钮设置为禁用状态
+          verificarLetra(letra);
+        };
+		// 将创建好的按钮添加到之前获取到的元素 (letrascontenedor) 中，这样按钮就会被显示在网页上
+        letrascontenedor.appendChild(button); // .appendChild() 用于向父元素中添加子元素
+      }
     }
-    const button = document.createElement('button');
-    button.textContent = letra;
-    button.onclick = function() {
-      this.disabled = true;
-      verificarLetra(letra);
-    };
-    letrascontenedor.appendChild(button);
-  }
-}
 
 
     function verificarVictoria() { // Función para verificar la victoria
