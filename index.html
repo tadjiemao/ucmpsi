@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="css/juego_del_ahorcado.css">	
+  <script type= "text/javascript" src="js/juego_del_ahorcado.js" defer></script>
+</head>
+
+<body>
+  <h1>Juego del Ahorcado</h1>
+  
+  <div id="ahorcado-contenedor">
+   <div id="media-contenedor">
+    <img id="ahorcado-imagen" src="img/ahorcado0.png" alt="Ahorcado"> <!-- Imagen inicial -->
+	
+    <p id="palabra-a-adivinar">Pulse [Iniciar el juego] para iniciar el juego</p>
+	
+    <div id="letras">
+      <!-- Botones de letras -->
+    </div>
+	
+    <p id="resultado"></p>
+	
+    <button onclick="iniciarJuego()" id="botonIniciar">Iniciar el juego</button>
+    <button onclick="reiniciarJuego()" id="botonReiniciar">Volver al inicio</button>
+	
+    <p id="temporizador">Tiempo restante: 60 seg</p>
+    <p id="intentos">Intentos restantes: 6</p>
+	
+    <audio id="logroSonido">
+      <source src="sound/logro.wav" type="audio/wav"> <!-- Audio para la victoria -->
+    </audio>
+    <audio id="fracasoSonido">
+      <source src="sound/fracaso.wav" type="audio/wav"> <!-- Audio para el fracaso -->
+    </audio>
+	
+	<video id="logroVideo" style="display: none;" width="320" height="238" controls>
+      <source src="img/logro.mp4" type="video/mp4"> <!-- Vídeo para reproducir tras la victoria -->
+    </video>
+	
+	<div class="animacion">
+      <img src="img/dog.gif" alt="dog">
+    </div>
+	
+	<img id="dog-home" src="img/dog_home.png" alt="Casa de perro">
+	<img id="black-hole" src="img/black_hole.gif" alt="Black Hole">
+	
+   </div>
+	
+  </div>
+</body>
+
+</html>
