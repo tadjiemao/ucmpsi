@@ -31,7 +31,7 @@
 	  font-size: 43px;
     }
 
-    #ahorcado-contenedor button:nth-of-type(2) { /* Seleccionar el segundo elemento del botón bajo el elemento #ahorcado-contenedor */
+    #botonReiniciar { /* Seleccionar el segundo elemento del botón bajo el elemento #ahorcado-contenedor */
       display: none; /* Ocultar el elemento para que no sea visible en la página y no ocupe ningún espacio */
     }
 	
